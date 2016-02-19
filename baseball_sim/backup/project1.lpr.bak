@@ -12,7 +12,7 @@ var
    i, j, k, _singles, _doubles, _triples, _homeruns, out_count, score, score2, inning : integer;
    _base : array[0..6] of integer;
    _player : array[0..1,0..8] of string; // fix refrences to this
-   _ab, _h, _2b, _3b, _hr, random_number, singles : array[0..1,0..8] of integer;
+   _ab, _h, _2b, _3b, _hr, random_number, singles : array[0..1,0..8] of integer;  // fix references to these
    half : integer;
 
 begin

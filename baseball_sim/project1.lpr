@@ -67,7 +67,7 @@ begin
      randomize;
      inning := 1;
      score := 0;
-     score2 := 0;
+     score2 := 0 ;
      half := 1;
 
      while( inning < 10 ) do
