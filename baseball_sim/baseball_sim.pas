@@ -161,7 +161,7 @@ begin
                                         random_number[half,player] := random(_ab[half,player])+1-pitcher_so[half,active_pitcher];
                                         // subtracted pitcher stats and calculated single percentage
 
-                                        if (random_number[half,player] < 101) then
+                                        if ((random_number[half,player] < 101) and (random_number[half,player] > 0)) then
                                         begin
                                                 _base[6] := _base[5];
                                                 _base[5] := _base[4];
