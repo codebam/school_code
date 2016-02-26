@@ -13,7 +13,7 @@
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="57"/>
-        <CursorPos X="30" Y="90"/>
+        <CursorPos X="22" Y="90"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -21,7 +21,7 @@
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="12" HistoryIndex="11">
+    <JumpHistory Count="11" HistoryIndex="10">
       <Position1>
         <Filename Value="project1.lpr"/>
         <Caret Line="33" Column="17" TopLine="1"/>
@@ -66,11 +66,18 @@
         <Filename Value="project1.lpr"/>
         <Caret Line="77" Column="59" TopLine="51"/>
       </Position11>
-      <Position12>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="90" Column="22" TopLine="57"/>
-      </Position12>
     </JumpHistory>
   </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="project1.lpr"/>
+        <Line Value="90"/>
+      </Item1>
+    </BreakPoints>
+  </Debugging>
   <EditorMacros Count="0"/>
 </CONFIG>
