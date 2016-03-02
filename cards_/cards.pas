@@ -1,0 +1,125 @@
+// Poker - a card playing game.
+// Before we cal program poker, we have to program cards.
+// We have to program card routines first.
+// What routines do we need:
+//      Dealing cards, selecting a card, storing cards
+//      represent the cards, identify rank and suit
+
+// Library of card playing routines
+// Librarys are Data types, variables, routines made availible to other programmers
+unit cards;
+
+interface
+// information that you export to programmers
+
+type
+        TDeck = array[0..51] of integer;
+
+var
+        Deck : TDeck;
+
+function GetSuit(CardNumber : integer) : integer;
+function GetRank(CardNumber : integer) : integer;
+function RankStr(rank : integer) : string;
+function SuitStr(SuitNum : integer) : string;
+function CardStr(RankNum, SuitNum : integer) : string;
+procedure InitDeck(var Deck : TDeck);
+procedure ShuffleDeck(var Deck: TDeck);
+
+implementation
+// the actual code; invisible to other programmers
+
+function GetSuit(CardNumber : integer) : integer;
+// returns the suit number of a given card
+begin
+        GetSuit := CardNumber div 13;
+end; // function getsuit
+
+function GetRank(CardNumber : integer) : integer;
+// returns the rank number of a given card
+begin
+        GetRank := CardNumber mod 13 + 2;
+end; // function getrank
+
+function RankStr(rank : integer) : string;
+// convert an integer card rank to its equivalent string
+begin
+        if (Rank >= 2) and (rank <= 9) then
+        begin
+                RankStr := chr(Rank + 48);
+        end
+        else if (rank = 10) then
+        begin
+                RankStr := '10';
+        end
+        else if (rank = 11) then
+        begin
+                RankStr := 'Jack';
+        end
+        else if (rank = 12) then
+        begin
+                RankStr := 'Queen';
+        end
+        else if (rank = 13) then
+        begin
+                RankStr := 'King';
+        end
+        else if (rank = 14) then
+        begin
+                RankStr := 'Ace';
+        end
+        else
+        begin
+                RankStr := 'Value Error';
+        end;
+end; // function rankstr
+
+function SuitStr(SuitNum : integer) : string;
+// convert a suit number to its cooresponding string
+begin
+        if (SuitNum = 0) then
+                SuitStr := 'Diamonds'
+        else if (SuitNum = 1) then
+                SuitStr := 'Clubs'
+        else if (SuitNum = 2) then
+                SuitStr := 'Hearts'
+        else if (SuitNum = 3) then
+                SuitStr := 'Spades'
+        else
+                SuitStr := 'Joker';
+end;
+
+function CardStr(RankNum, SuitNum : integer) : string;
+begin
+        CardStr := RankStr(RankNum)+' of '+SuitStr(SuitNum);
+end; // function cardstr
+
+procedure InitDeck(var Deck : TDeck);
+// Initialize the deck of cards
+var
+        i : integer;
+begin
+        for i := 0 to 51 do
+        begin
+                Deck[i] := i;
+        end;
+end; // function initdeck
+
+procedure ShuffleDeck(var Deck: TDeck);
+var
+        temp, i, randint : integer;
+begin
+        for i := 0 to 51 do
+        begin
+                randint := random(52);
+                // generate random number from 0 to 51
+
+                temp := Deck[i];
+                Deck[i] := Deck[randint];
+                Deck[randint] := temp;
+                // swap position i with position of random number
+        end;
+end; // procedure shuffledeck
+
+end.
+

@@ -1,0 +1,21 @@
+unit poker_lib;
+
+procedure identify_hand(hand : Thand; var handtype : string)
+begin
+
+end; // procedure identify_hand
+
+interface
+
+(*
+Deal cards
+Identify a Hand
+Get new cards
+Figure out who wins
+
+*)
+
+implementation
+
+end.
+
