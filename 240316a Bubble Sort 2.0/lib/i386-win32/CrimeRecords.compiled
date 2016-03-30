@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\2.6.4\bin\i386-win32\fpc.exe" Date="1154384177"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -WG -vewnhi &quot;-FiU:\Documents\ICS 4U1\Unit 3\240316a Bubble Sort 2.0\lib\i386-win32&quot; -FuC:\lazarus\lcl\units\i386-win32\win32 -FuC:\lazarus\lcl\units\i386-win32 -FuC:\lazarus\components\lazutils\lib\i386-win32 -FuC:\lazarus\packager\units\i386-win32 &quot;-FuU:\Documents\ICS 4U1\Unit 3\240316a Bubble Sort 2.0\&quot; &quot;-FUU:\Documents\ICS 4U1\Unit 3\240316a Bubble Sort 2.0\lib\i386-win32\&quot; -l -dLCL -dLCLwin32 CrimeRecords.lpr"/>
+  <Complete Value="False"/>
+</CONFIG>
